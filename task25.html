@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <style>
+    #train {
+      position: relative;
+      cursor: pointer;
+      left: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <img id="train" src="https://js.cx/clipart/train.gif">
+  <h2 style="color: royalblue;">Click the following buttons to handle animation</h2>
+  <button id="startButton">Start</button>
+  <button id="stopButton">Stop</button>
+
+  <script>
+    const train = document.getElementById('train');
+    const startButton = document.getElementById('startButton');
+    const stopButton = document.getElementById('stopButton');
+    let animationInterval;
+
+    startButton.addEventListener('click', function() {
+      let initialLeft = parseFloat(getComputedStyle(train).left || '0');
+      let start = performance.now(); // Use performance.now() for better timing accuracy
+
+      animationInterval = requestAnimationFrame(function animate(time) {
+        let timePassed = time - start;
+        let newPosition = initialLeft + timePassed / 5;
+
+        train.style.left = newPosition + 'px';
+
+        if (newPosition > window.innerWidth) {
+          train.style.left = '0px';
+          start = performance.now();
+        }
+
+        if (newPosition <= window.innerWidth) {
+          animationInterval = requestAnimationFrame(animate);
+        }
+      });
+    });
+
+    stopButton.addEventListener('click', function() {
+      cancelAnimationFrame(animationInterval);
+    });
+  </script>
+</body>
+
+</html>

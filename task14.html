@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Builderz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
+    <style>
+       
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+
+        .nav {
+            background-color: #ffbb01;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 20vh;
+            max-width: 1920px;
+            margin: 0 auto;
+            color: black;
+            padding: 0 20px;
+        }
+
+
+        .heading {
+            font-size: 2.5rem;
+            font-weight: 800;
+            font-family: serif;
+        }
+
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+        .contact-info i {
+            font-size: 24px;
+        }
+
+
+        .openhr p,
+        .call p,
+        .email p {
+            margin: 0;
+        }
+
+
+        .lowernav {
+            background-color: #000;
+            max-width: 1800px;
+            margin: 0 auto;
+            position: absolute;
+            top: 15%;
+            color: white;
+            left: 1rem;
+            right: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+        }
+
+
+        .lnav ul {
+            list-style: none;
+            display: flex;
+        }
+
+
+        .lnav li {
+            margin-right: 1rem;
+        }
+
+
+        .lnav i {
+            margin-left: 0.25rem;
+        }
+
+
+        .r-nav {
+            border: 2px solid #fff;
+            padding: 0.5rem 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+
+        .image {
+            background-image: url("https://plus.unsplash.com/premium_photo-1682974931776-2b5d5ed24aa0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80");
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 80vh;
+        }
+
+
+        .imageheading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 2rem;
+        }
+
+
+        .imageheading .first , .imageheading .second p {
+            margin: 0;
+            color: #fff;
+            font-size: 40px;
+            font-weight: 300;
+        }
+
+
+        .imageheading .second p {
+            font-size: 60px;
+            font-weight: 800;
+        }
+
+
+        .imageheading .r-nav {
+            background-color: #000;
+            color: #fff;
+            font-size: 1.5rem;
+            border: 2px solid #fff;
+            padding: 0.25rem 0.5rem;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 20px;
+            background-color: #000;
+        }
+
+
+        .footer-section {
+            border: 2px solid black;
+            background-color: rgb(255, 204, 0);
+            padding: 20px;
+            width: calc(33.33% - 40px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+
+        .footer-section .icon {
+            font-size: 80px;
+            margin: 10px;
+        }
+
+
+        .footer-section p {
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+
+        /* Media queries for responsiveness */
+        @media screen and (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                height: auto;
+            }
+
+
+            .heading {
+                margin-top: 20px;
+            }
+
+
+            .contact-info {
+                flex-direction: column;
+                text-align: center;
+                margin-top: 20px;
+            }
+
+
+            .openhr, .call, .email {
+                margin-top: 20px;
+            }
+
+
+            .lowernav {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 20px;
+            }
+
+
+            .lnav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+
+            .lnav li {
+                margin: 10px 0;
+            }
+
+
+            .imageheading .first p, .imageheading .second p {
+                font-size: 30px;
+            }
+
+
+            .imageheading .second p {
+                font-size: 50px;
+            }
+
+
+            .footer-section {
+                width: 100%;
+            }
+
+            .lnav:hover{
+                color: #ffbb01;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="nav">
+            <div class="heading">
+                <p>Builderz</p>
+            </div>
+            <div class="contact-info">
+                <div class="icon"><i class="ri-timer-line"></i></div>
+                <div class="content">
+                    <p>Opening Hour</p>
+                    <p>Mon-Fri, 8:00-9:00</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <div class="icon"><i class="ri-customer-service-2-line"></i></div>
+                <div class="content">
+                    <p>Call us</p>
+                    <p>+0123645987</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <div class="icon"><i class="ri-mail-line"></i></div>
+                <div class="content">
+                    <p>Email us</p>
+                    <a href="mailto:info@gmail.com">info@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="lowernav">
+            <div class="lnav">
+                <ul>
+                    <li class="m-4">HOME</li>
+                    <li class="m-4">ABOUT</li>
+                    <li class="m-4">SERVICE</li>
+                    <li class="m-4">TEAM</li>
+                    <li class="m-4">PROJECT</li>
+                    <li class="m-4">PAGES <i class="ri-arrow-down-s-fill"></i></li>
+                    <li class="m-4">CONTACT</li>
+                </ul>
+            </div>
+            <div class="r-nav">
+                Get a Quote
+            </div>
+        </div>
+        <div class="image"></div>
+        <div class="imageheading">
+            <div class="first">
+                <p style="font-size: 40px; color: white; font-weight: 100;">We are Professional</p>
+            </div>
+            <div class="second">
+                <p style="font-size: 60px; color: white; font-weight: 800;">For Your Dream Project</p>
+            </div>
+            <div class="r-nav">
+                Get a Quote
+            </div>
+        </div>
+        <footer>
+            <div class="footer-section">
+                <div class="icon"><i class="ri-building-line"></i></div>
+                <div class="1stcontent">
+                    <p>Expert Worker</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim ullam laudantium dolorem eaque pariatur culpa veniam porro dolores quibusdam molestias!</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <div class="icon"><i class="ri-building-line"></i></div>
+                <div class="2ndcontent">
+                    <p>Quality Work</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi unde voluptate illum velit cupiditate, veniam ducimus reiciendis alias commodi illo laudantium. Qui tempora veniam explicabo.</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <div class="icon"><i class="ri-phone-fill"></i></div>
+                <div class="3rdContent">
+                    <p>24/7 Support</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem non molestiae similique nihil quidem repellendus iste sunt ea numquam est fuga debitis, hic unde totam sapiente nulla iure architecto eligendi.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

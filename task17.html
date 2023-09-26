@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+  <style>
+   
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      max-width: 100%;
+    }
+
+    .input {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px 0;
+      background-color: #f8f8f8;
+      border-radius: 5px;
+    }
+
+    .input i {
+      margin-right: 10px;
+      color: #333;
+      font-size: 18px;
+    }
+
+    .input p {
+      font-weight: bold;
+      margin: 0 10px 0 0;
+      width: 100px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <main class="flex">
+    <div class="form-container">
+      <div class="input">
+        <p>First Name</p>
+        <i class="ri-user-3-fill"></i>
+        <input type="text" name="name" id="firstName" placeholder="First Name" required>
+      </div>
+
+      <div class="input">
+        <p>Last Name</p>
+        <i class="ri-user-3-fill"></i>
+        <input type="text" name="name" id="lastName" placeholder="Last Name" required>
+      </div>
+
+      <div class="input">
+        <p>E-mail</p>
+        <i class="ri-mail-line"></i>
+        <input type="text" name="email" id="email" placeholder="E-mail Address" required>
+      </div>
+
+      <div class="input">
+        <p>Phone</p>
+        <i class="ri-phone-line"></i>
+        <input type="text" name="phone" id="phone" placeholder="(945)555-1212" required>
+      </div>
+
+      <div class="input">
+        <p>Address</p>
+        <i class="ri-map-pin-line"></i>
+        <input type="text" name="address" id="address" placeholder="Address" required>
+      </div>
+
+      <div class="input">
+        <p>City</p>
+        <i class="ri-building-2-line"></i>
+        <input type="text" name="city" id="city" placeholder="City" required>
+      </div>
+
+      <div class="input">
+        <p>State</p>
+        <i class="ri-map-pin-line"></i>
+        <select name="state" id="state" required>
+          <option value="" selected disabled>Please select your state</option>
+          <option value="state1">State 1</option>
+          <option value="state2">State 2</option>
+          <option value="state3">State 3</option>
+        </select>
+      </div>
+
+
+      <div class="input">
+        <p>Do you have hosting?</p>
+        <input type="radio" name="hosting" id="hostingYes" required>
+        <label for="hostingYes">Yes</label>
+        <input type="radio" name="hosting" id="hostingNo" required>
+        <label for="hostingNo">No</label>
+      </div>
+
+      <div class="input">
+        <p>Project Description</p>
+        <i class="ri-file-text-line"></i>
+        <input type="text" name="projectDescription" id="projectDescription" placeholder="Project Description" required>
+      </div>
+
+      <button>Submit</button>
+    </div>
+  </main>
+</body>
+</html>
